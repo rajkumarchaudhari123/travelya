@@ -91,7 +91,7 @@ export default function DestinationsPage() {
       duration: '4-6 Days',
       bestFor: 'Couples, Art Lovers',
       price: '$1499',
-      image: 'https://images.unsplash.com/photo-1502602898667-7e55819e91e2?w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGFyaXN8ZW58MHx8MHx8fDA%3D',
       highlights: ['Eiffel Tower', 'Louvre Museum', 'River Seine', 'French Cuisine']
     },
     {
@@ -139,7 +139,7 @@ export default function DestinationsPage() {
       duration: '6-8 Days',
       bestFor: 'Family, Nature',
       price: '$799',
-      image: 'https://images.unsplash.com/photo-1588666309990-d68f08e3d4c6?w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8a2VyYWxhfGVufDB8fDB8fHww',
       highlights: ['Houseboat Stay', 'Ayurveda', 'Elephant Safari', 'Tea Gardens']
     },
     {
@@ -197,17 +197,9 @@ export default function DestinationsPage() {
                 <div className="flex flex-col md:flex-row items-center gap-4">
                   <div className="flex-1 relative">
                     <FaSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 text-xl" />
-                    <input
-                      type="text"
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                      placeholder="Search destinations, countries, or activities..."
-                      className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition-all duration-300"
-                    />
+                  
                   </div>
-                  <button className="px-8 py-4 bg-gradient-to-r from-emerald-600 to-lime-500 text-white font-bold rounded-xl hover:opacity-90 transition-all duration-300 transform hover:scale-105">
-                    Search
-                  </button>
+             
                 </div>
               </div>
             </div>

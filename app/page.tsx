@@ -418,9 +418,7 @@ export default function TravelAgencyPage() {
                   </div>
                   
                   <div className="flex space-x-2">
-                    <button className="flex-1 bg-gradient-to-r from-emerald-500 to-lime-500 hover:from-emerald-600 hover:to-lime-600 text-white py-2 px-4 rounded-lg font-bold transition-all transform hover:scale-105 text-sm md:text-base">
-                      Book Now
-                    </button>
+
                     <button className="px-4 py-2 border-2 border-emerald-500 text-emerald-600 hover:bg-emerald-50 rounded-lg transition-all">
                       <FaHeart />
                     </button>

@@ -1,14 +1,14 @@
 'use client';
 
 import React, { useState, useRef } from 'react';
-import { 
-  FaPlane, 
-  FaPhoneAlt, 
-  FaEnvelope, 
-  FaMapMarkerAlt, 
-  FaFacebookF, 
-  FaTwitter, 
-  FaInstagram, 
+import {
+  FaPlane,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
   FaLinkedinIn,
   FaYoutube,
   FaWhatsapp,
@@ -26,22 +26,22 @@ import {
   FaTree,
   FaWater
 } from 'react-icons/fa';
-import { 
-  MdFlight, 
-  MdHotel, 
-  MdDirectionsCar, 
-  MdTravelExplore, 
+import {
+  MdFlight,
+  MdHotel,
+  MdDirectionsCar,
+  MdTravelExplore,
   MdBeachAccess,
   MdAttachMoney,
   MdTempleHindu,
   MdLandscape,
   MdLocationCity
 } from 'react-icons/md';
-import { 
-  GiModernCity, 
-  GiMountainCave, 
-  GiIsland, 
-  GiWorld, 
+import {
+  GiModernCity,
+  GiMountainCave,
+  GiIsland,
+  GiWorld,
   GiCommercialAirplane,
   GiCastle,
   GiElephant,
@@ -56,7 +56,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
   const marqueeRef = useRef<HTMLDivElement>(null);
   const [isHovering, setIsHovering] = useState(false);
-  
+
   // Enhanced marquee items with 3D effects - FIXED: No Math.random()
   const marqueeItems = [
     { text: "🌍 EXPLORE 100+ INDIAN DESTINATIONS", icon: <MdTravelExplore />, color: "from-emerald-400 to-blue-400" },
@@ -72,7 +72,7 @@ export default function Footer() {
   const socialLinks = [
     { icon: <FaFacebookF />, name: 'Facebook', url: 'https://facebook.com/travelya', color: 'bg-blue-600 hover:bg-blue-700' },
     { icon: <FaTwitter />, name: 'Twitter', url: 'https://twitter.com/travelya', color: 'bg-sky-500 hover:bg-sky-600' },
-    { icon: <FaInstagram />, name: 'Instagram', url: 'https://instagram.com/travelya', color: 'bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 hover:opacity-90' },
+    { icon: <FaInstagram />, name: 'Instagram', url: 'https://www.instagram.com/travelya.site?igsh=NDlodzluemdxOHdo', color: 'bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 hover:opacity-90' },
     { icon: <FaLinkedinIn />, name: 'LinkedIn', url: 'https://linkedin.com/company/travelya', color: 'bg-blue-700 hover:bg-blue-800' },
     { icon: <FaYoutube />, name: 'YouTube', url: 'https://youtube.com/travelya', color: 'bg-red-600 hover:bg-red-700' },
   ];
@@ -151,8 +151,8 @@ export default function Footer() {
       <div className="relative bg-gradient-to-r from-emerald-500/20 via-blue-500/20 to-purple-500/20 py-5 overflow-hidden">
         {/* Glow effect */}
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-400/30 via-blue-400/30 to-purple-400/30 blur-2xl"></div>
-        
-        <div 
+
+        <div
           ref={marqueeRef}
           className="marquee-container relative z-10"
           onMouseEnter={() => setIsHovering(true)}
@@ -160,25 +160,25 @@ export default function Footer() {
         >
           <div className={`animate-marquee whitespace-nowrap ${isHovering ? 'pause-animation' : ''}`}>
             {[...marqueeItems, ...marqueeItems].map((item, index) => (
-              <span 
-                key={index} 
+              <span
+                key={index}
                 className="inline-flex items-center mx-10 text-lg font-bold group"
               >
                 {/* 3D Effect Container */}
                 <div className="relative">
                   {/* 3D Shadow */}
                   <div className="absolute -inset-1 bg-gradient-to-r from-gray-900 to-transparent rounded-full blur opacity-50 group-hover:opacity-100"></div>
-                  
+
                   {/* Icon Container */}
                   <div className={`relative bg-gradient-to-r ${item.color} p-3 rounded-full transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300`}>
                     <span className="text-xl">{item.icon}</span>
                   </div>
                 </div>
-                
+
                 <span className="ml-3 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent drop-shadow-lg">
                   {item.text}
                 </span>
-                
+
                 {/* 3D Separator */}
                 <div className="relative ml-5">
                   <div className="absolute -inset-2 bg-gradient-to-r from-yellow-400 to-amber-500 rounded-full blur opacity-20 group-hover:opacity-40"></div>
@@ -193,14 +193,14 @@ export default function Footer() {
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-16">
-          
+
           {/* Company Info with 3D Logo */}
           <div className="lg:col-span-2 space-y-8">
             {/* 3D Logo Section */}
             <div className="relative group">
               {/* Outer Glow */}
               <div className="absolute -inset-6 bg-gradient-to-r from-emerald-500 via-blue-500 to-purple-500 rounded-3xl blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
-              
+
               {/* 3D Card */}
               <div className="relative bg-gradient-to-br from-gray-800 via-gray-900 to-blue-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 shadow-2xl">
                 <div className="flex items-center space-x-6">
@@ -208,7 +208,7 @@ export default function Footer() {
                   <div className="relative">
                     {/* Logo Shadow */}
                     <div className="absolute -inset-4 bg-gradient-to-r from-emerald-400 to-blue-400 rounded-2xl blur-xl opacity-30"></div>
-                    
+
                     {/* Logo Image with 3D Effect */}
                     <div className="relative bg-gradient-to-br from-white to-gray-100 p-4 rounded-2xl shadow-2xl transform group-hover:scale-105 group-hover:rotate-3 transition-all duration-500 border-2 border-emerald-400/30">
                       <div className="w-16 h-16 relative overflow-hidden">
@@ -236,13 +236,13 @@ export default function Footer() {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div>
                     <h2 className="text-3xl font-bold bg-gradient-to-r from-emerald-300 via-blue-300 to-purple-300 bg-clip-text text-transparent">
                       Travelya
                     </h2>
                     <p className="text-sm text-gray-300 mt-1 tracking-widest">EXPLORE INCREDIBLE INDIA</p>
-                    
+
                     {/* Awards */}
                     <div className="mt-4 flex flex-wrap gap-2">
                       {awards.slice(0, 3).map((award, index) => (
@@ -253,12 +253,12 @@ export default function Footer() {
                     </div>
                   </div>
                 </div>
-                
+
                 {/* Description */}
                 <p className="mt-6 text-gray-300 leading-relaxed">
                   Making travel dreams come true since 2008. We specialize in creating unforgettable Indian travel experiences with premium services and 24/7 support.
                 </p>
-                
+
                 {/* Contact Info with 3D Effects */}
                 <div className="mt-8 space-y-4">
                   {[
@@ -269,7 +269,7 @@ export default function Footer() {
                     <div key={idx} className="group/item relative">
                       {/* 3D Hover Effect */}
                       <div className="absolute -inset-2 bg-gradient-to-r from-gray-800 to-transparent rounded-xl opacity-0 group-hover/item:opacity-100 transition-opacity duration-300"></div>
-                      
+
                       <div className="relative flex items-center space-x-4 p-3 rounded-xl bg-gray-800/30 backdrop-blur-sm">
                         <div className={`bg-gradient-to-r ${contact.color} p-3 rounded-full`}>
                           {contact.icon}
@@ -300,18 +300,18 @@ export default function Footer() {
                   </span>
                 </h3>
               </div>
-              
+
               {/* Links Grid with 3D Hover */}
               <div className="grid grid-cols-2 gap-3">
                 {navLinks.map((link, index) => (
-                  <a 
+                  <a
                     key={index}
                     href={link.href}
                     className="group/link relative p-3 rounded-xl transition-all duration-300 hover:translate-x-2"
                   >
                     {/* 3D Hover Background */}
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-xl opacity-0 group-hover/link:opacity-100 transition-opacity duration-300"></div>
-                    
+
                     {/* Content */}
                     <div className="relative flex items-center space-x-2">
                       <FaChevronRight className="text-cyan-400 text-xs opacity-0 group-hover/link:opacity-100 transform group-hover/link:translate-x-1 transition-all duration-300" />
@@ -332,7 +332,7 @@ export default function Footer() {
               </h4>
               <div className="flex flex-wrap gap-3">
                 {socialLinks.map((social, index) => (
-                  <a 
+                  <a
                     key={index}
                     href={social.url}
                     target="_blank"
@@ -341,10 +341,10 @@ export default function Footer() {
                   >
                     {/* 3D Glow */}
                     <div className="absolute -inset-2 bg-current rounded-full blur opacity-0 group-hover/social:opacity-30 transition-opacity duration-300"></div>
-                    
+
                     {/* Icon */}
                     <span className="relative z-10">{social.icon}</span>
-                    
+
                     {/* Tooltip */}
                     <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-gray-900 text-white text-xs rounded-lg opacity-0 group-hover/social:opacity-100 transition-opacity duration-300 whitespace-nowrap">
                       {social.name}
@@ -366,17 +366,17 @@ export default function Footer() {
                 </span>
               </h3>
             </div>
-            
+
             {/* Destinations Grid */}
             <div className="grid grid-cols-2 gap-3">
               {destinations.map((dest, index) => (
-                <div 
+                <div
                   key={index}
                   className="group/dest relative p-4 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm hover:from-emerald-500/20 hover:to-blue-500/20 transition-all duration-300 cursor-pointer"
                 >
                   {/* 3D Hover Effect */}
                   <div className="absolute inset-0 border border-emerald-500/20 rounded-xl opacity-0 group-hover/dest:opacity-100 transition-opacity duration-300"></div>
-                  
+
                   <div className="relative flex items-center space-x-3">
                     <div className="bg-gradient-to-r from-emerald-400 to-blue-400 p-2 rounded-lg">
                       {dest.icon}
@@ -386,7 +386,7 @@ export default function Footer() {
                       <div className="text-xs text-gray-400">{dest.location}</div>
                     </div>
                   </div>
-                  
+
                   {/* Tag Badge */}
                   <div className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-amber-500 text-black text-xs px-2 py-1 rounded-full font-bold transform group-hover/dest:scale-110 transition-transform duration-300">
                     {dest.tag}
@@ -394,7 +394,7 @@ export default function Footer() {
                 </div>
               ))}
             </div>
-            
+
             {/* WhatsApp Support */}
             <div className="mt-8 p-5 rounded-2xl bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm border border-green-500/30">
               <div className="flex items-center space-x-3 mb-3">
@@ -406,7 +406,7 @@ export default function Footer() {
                   <p className="text-sm text-gray-300">Get instant help on WhatsApp</p>
                 </div>
               </div>
-              <a 
+              <a
                 href="https://wa.me/918368273091"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -429,30 +429,30 @@ export default function Footer() {
                 </span>
               </h3>
             </div>
-            
+
             <div className="relative p-6 rounded-2xl bg-gradient-to-br from-purple-900/20 to-pink-900/20 backdrop-blur-sm border border-purple-500/30">
               <p className="text-gray-300 mb-6">
                 Subscribe to get exclusive travel deals, destination guides, and special offers!
               </p>
-              
+
               <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur opacity-30"></div>
-                  <input 
-                    type="email" 
-                    placeholder="Enter your email" 
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
                     className="relative w-full px-5 py-4 bg-gray-900/80 border border-purple-500/30 rounded-full text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 backdrop-blur-sm"
                   />
                 </div>
-                
-                <button 
+
+                <button
                   type="submit"
                   className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white py-4 rounded-full font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   Subscribe Now
                 </button>
               </form>
-              
+
               {/* Payment Methods */}
               <div className="mt-8 pt-6 border-t border-gray-700">
                 <h4 className="font-bold mb-4 flex items-center">
@@ -475,7 +475,7 @@ export default function Footer() {
         <div className="relative pt-12 border-t border-gray-700/50">
           {/* Glow Line */}
           <div className="absolute -top-px left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent"></div>
-          
+
           <div className="flex flex-col md:flex-row justify-between items-center">
             {/* Copyright */}
             <div className="flex items-center space-x-3 text-gray-400 mb-4 md:mb-0">
@@ -485,11 +485,11 @@ export default function Footer() {
               </div>
               <span>{currentYear} Travelya. All rights reserved.</span>
             </div>
-            
+
             {/* Policies */}
             <div className="flex flex-wrap justify-center gap-6">
               {['Privacy Policy', 'Terms & Conditions', 'Cookie Policy', 'Disclaimer'].map((policy, index) => (
-                <a 
+                <a
                   key={index}
                   href="#"
                   className="text-gray-400 hover:text-emerald-300 transition-colors duration-300 hover:scale-105"
@@ -498,7 +498,7 @@ export default function Footer() {
                 </a>
               ))}
             </div>
-            
+
             {/* Certifications */}
             <div className="flex items-center space-x-4 mt-4 md:mt-0">
               {[
