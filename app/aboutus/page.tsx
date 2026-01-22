@@ -55,7 +55,7 @@ export default function AboutUsPage() {
       image: 'https://res.cloudinary.com/dpfdj5xc0/image/upload/v1758807935/Chat/ChatFiles/icw5snk1w7rpe1iyoyd5.jpg', 
       desc: '15+ years expertise in luxury travel planning and destination management',
       expertise: ['Luxury Travel', 'Destination Planning', 'VIP Services'],
-      experience: '15+ Years',
+      experience: '2+ Years',
       key: 'priya' as const
     },
     { 
@@ -64,7 +64,7 @@ export default function AboutUsPage() {
       image: '/rajnish.jpg', 
       desc: 'Expert in logistics, customer experience and operational excellence',
       expertise: ['Logistics', 'Operations', 'Quality Control'],
-      experience: '8+ Years',
+      experience: '2+ Years',
       key: 'rohan' as const
     },
     { 
@@ -73,7 +73,7 @@ export default function AboutUsPage() {
       image: '/adesh.jpg', 
       desc: 'Dedicated to creating unforgettable experiences for every traveler',
       expertise: ['Customer Service', 'Relationship Management', 'Personalization'],
-      experience: '6+ Years',
+      experience: '1+ Years',
       key: 'anjali' as const
     },
   ];

@@ -9,6 +9,7 @@ const images = [
   { src: '/gallery4.jpg', title: 'Snow Trek' },
   { src: '/gallery5.jpg', title: 'Cultural Tour' },
   { src: '/gallery6.jpg', title: 'Nature Walk' },
+  { src: '/gallery7.jpg', title: 'Historical Sites' },
 ];
 
 export default function Page() {

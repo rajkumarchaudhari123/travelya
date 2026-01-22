@@ -43,8 +43,8 @@ export default function Navbar() {
 
   const navLinks = [
     { name: 'Home', href: '/' },
-    { 
-      name: 'Destinations', 
+    {
+      name: 'Destinations',
       href: '/destinations',
       dropdown: [
         { name: 'Domestic', icon: <MdFlight />, color: 'text-yellow-600' },
@@ -54,8 +54,8 @@ export default function Navbar() {
         { name: 'City Breaks', icon: <GiModernCity />, color: 'text-cyan-600' },
       ]
     },
-    { 
-      name: 'Services', 
+    {
+      name: 'Services',
       href: '/services',
       dropdown: [
         { name: 'Flight Booking', icon: <MdFlight />, color: 'text-sky-600' },
@@ -83,16 +83,15 @@ export default function Navbar() {
   return (
     <>
       {/* Navbar */}
-      <nav className={`fixed w-full z-50 transition-all duration-700 transform ${
-        isScrolled 
+      <nav className={`fixed w-full z-50 transition-all duration-700 transform ${isScrolled
           ? 'bg-gradient-to-r from-emerald-700/95 via-lime-700/95 to-yellow-600/95 backdrop-blur-xl shadow-2xl py-3 scale-100'
           : 'bg-gradient-to-r from-emerald-500 via-lime-500 to-yellow-400 py-5 shadow-xl'
-      }`}>
+        }`}>
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex items-center justify-between">
-            
+
             {/* Logo with 3D Effects - Fixed Logo Display */}
-            <div 
+            <div
               className="flex items-center space-x-3 group cursor-pointer"
               onClick={triggerLogoUpload}
               title="Click to change logo"
@@ -100,18 +99,18 @@ export default function Navbar() {
               <div className="relative">
                 {/* 3D Outer Glow */}
                 <div className="absolute -inset-3 bg-gradient-to-r from-emerald-400 via-yellow-300 to-lime-400 rounded-full blur-xl opacity-60 group-hover:opacity-100 transition-all duration-500 group-hover:scale-110"></div>
-                
+
                 {/* 3D Shadow Effect */}
                 <div className="absolute -inset-2 bg-gradient-to-r from-emerald-800/30 via-lime-800/30 to-yellow-800/30 rounded-full blur-lg opacity-50 group-hover:opacity-70 transition-opacity duration-500"></div>
-                
+
                 {/* Logo Container with 3D Depth */}
                 <div className="relative bg-gradient-to-br from-white via-emerald-50 to-yellow-50 p-3 rounded-2xl shadow-2xl transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 group-hover:shadow-3xl border-2 border-white/30">
                   {/* Logo Image */}
                   {logoImage ? (
                     <div className="w-10 h-10 flex items-center justify-center overflow-hidden">
-                      <img 
+                      <img
                         src={logoImage}
-                        alt="Travelya Logo" 
+                        alt="Travelya Logo"
                         className="w-full h-full object-contain"
                       />
                     </div>
@@ -124,13 +123,13 @@ export default function Navbar() {
                     </div>
                   )}
                 </div>
-                
+
                 {/* Floating Elements */}
                 <div className="absolute -top-2 -right-2 text-xs font-bold bg-gradient-to-r from-yellow-400 to-amber-500 text-white px-2 py-1 rounded-full animate-bounce">
                   ✨
                 </div>
               </div>
-              
+
               {/* Brand Name with 3D Text */}
               <div className="flex flex-col">
                 <span className="text-2xl font-extrabold tracking-tight text-white drop-shadow-2xl">
@@ -154,23 +153,23 @@ export default function Navbar() {
                   >
                     {/* Background Glow */}
                     <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/0 via-lime-500/0 to-yellow-400/0 group-hover:from-emerald-500/20 group-hover:via-lime-500/20 group-hover:to-yellow-400/20 rounded-xl transition-all duration-500"></div>
-                    
+
                     {/* 3D Border Effect */}
                     <div className="absolute inset-0 border-2 border-transparent group-hover:border-white/30 rounded-xl transition-all duration-500"></div>
-                    
+
                     {/* Content */}
                     <span className="relative drop-shadow-lg group-hover:drop-shadow-xl transition-all duration-300">{link.name}</span>
                     {link.dropdown && (
                       <FiChevronDown className="relative transform transition-transform duration-500 group-hover:rotate-180" />
                     )}
-                    
+
                     {/* Animated Underline */}
                     <div className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-yellow-300 to-emerald-300 group-hover:w-4/5 group-hover:left-1/10 transition-all duration-500 transform -translate-x-1/2 group-hover:translate-x-0"></div>
                   </a>
-                  
+
                   {/* 3D Dropdown Menu */}
                   {link.dropdown && activeDropdown === link.name && (
-                    <div 
+                    <div
                       className="absolute left-0 mt-3 w-72 bg-gradient-to-br from-emerald-50 via-lime-50 to-yellow-50 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/50 overflow-hidden transform transition-all duration-500 origin-top"
                       style={{ transformStyle: 'preserve-3d', transform: 'rotateX(0deg)' }}
                       onMouseLeave={() => setActiveDropdown(null)}
@@ -182,7 +181,7 @@ export default function Navbar() {
                           <span className="font-bold">{link.name}</span>
                         </div>
                       </div>
-                      
+
                       {/* Dropdown Items */}
                       <div className="p-2">
                         {link.dropdown.map((item, idx) => (
@@ -217,14 +216,21 @@ export default function Navbar() {
               <button className="relative group">
                 {/* Outer Glow */}
                 <div className="absolute -inset-3 bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-500 rounded-full blur-xl opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"></div>
-                
+
                 {/* Button with 3D Depth */}
-                <div className="relative bg-gradient-to-r from-yellow-500 via-amber-500 to-orange-500 text-white font-bold px-8 py-4 rounded-2xl transform transition-all duration-500 group-hover:scale-105 group-hover:shadow-2xl group-hover:translate-y-[-2px] border-2 border-white/30">
-                  <span className="flex items-center space-x-3 drop-shadow-lg">
-                    <MdFlight className="transform -rotate-45 group-hover:rotate-12 transition-transform duration-700" />
-                    <span className="tracking-wider">BOOK NOW</span>
-                  </span>
-                  
+                <div className="relative bg-gradient-to-r from-yellow-500 via-amber-500 to-orange-500 text-white font-bold px-6 py-2 rounded-2xl transform transition-all duration-500 group-hover:scale-105 group-hover:shadow-2xl group-hover:translate-y-[-2px] border-2 border-white/30">
+                  <a
+                    href="https://wa.me/918368273091?text=Hello%20Travelya!%20I%20want%20to%20book%20a%20travel%20package.%20Please%20share%20details."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span className="flex items-center space-x-3 drop-shadow-lg">
+                      <MdFlight className="-rotate-45 hover:rotate-12 transition-transform duration-700" />
+                      <span className="tracking-wider">BOOK NOW</span>
+                    </span>
+                  </a>
+
+
                   {/* Floating Icon */}
                   <div className="absolute -top-2 -right-2 text-xs bg-white text-amber-600 px-2 py-1 rounded-full font-bold animate-bounce">
                     ✈️
@@ -239,7 +245,7 @@ export default function Navbar() {
               <button className="relative group">
                 {/* Outer Glow */}
                 <div className="absolute -inset-2 bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-500 rounded-full blur-lg opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"></div>
-                
+
                 {/* Button with 3D Depth */}
                 <div className="relative bg-gradient-to-r from-yellow-500 via-amber-500 to-orange-500 text-white font-bold px-4 py-3 rounded-xl transform transition-all duration-500 group-hover:scale-105 group-hover:shadow-lg group-hover:translate-y-[-1px] border-2 border-white/30">
                   <span className="flex items-center space-x-2 drop-shadow-lg text-sm">
@@ -267,11 +273,10 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu with 3D Effects */}
-          <div className={`xl:hidden overflow-hidden transition-all duration-700 ${
-            isMenuOpen 
-              ? 'max-h-[500px] opacity-100 mt-6 scale-100' 
+          <div className={`xl:hidden overflow-hidden transition-all duration-700 ${isMenuOpen
+              ? 'max-h-[500px] opacity-100 mt-6 scale-100'
               : 'max-h-0 opacity-0 scale-95'
-          }`}>
+            }`}>
             <div className="bg-gradient-to-br from-emerald-600/95 via-lime-600/95 to-yellow-500/95 backdrop-blur-xl rounded-2xl p-6 border border-white/30 shadow-2xl">
               {navLinks.map((link, index) => (
                 <div key={index} className="mb-3">
@@ -288,7 +293,7 @@ export default function Navbar() {
                   </a>
                 </div>
               ))}
-              
+
               {/* Mobile Actions */}
               <div className="mt-8 pt-6 border-t border-white/30 space-y-4">
                 <div className="grid grid-cols-1 gap-4">

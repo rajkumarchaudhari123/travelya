@@ -85,8 +85,6 @@ export default function Footer() {
     { name: 'Gallery', href: '/gallery' },
     { name: 'About Us', href: '/aboutus' },
     { name: 'Contact', href: '/contact' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'FAQs', href: '/faq' },
   ];
 
   // Popular INDIAN destinations with icons (using correct icons)
@@ -263,7 +261,7 @@ export default function Footer() {
                 <div className="mt-8 space-y-4">
                   {[
                     { icon: <FaPhoneAlt />, label: 'Call Us', value: '+91 836 827 3091', color: 'from-green-500 to-emerald-500' },
-                    { icon: <FaEnvelope />, label: 'Email Us', value: 'travelya@example.com', color: 'from-blue-500 to-cyan-500' },
+                    { icon: <FaEnvelope />, label: 'Email Us', value: 'travelya@123.com', color: 'from-blue-500 to-cyan-500' },
                     { icon: <FaMapMarkerAlt />, label: 'Visit Us', value: 'Noida sector-82 pocket-12, India', color: 'from-purple-500 to-pink-500' },
                   ].map((contact, idx) => (
                     <div key={idx} className="group/item relative">
