@@ -84,8 +84,8 @@ export default function Navbar() {
     <>
       {/* Navbar */}
       <nav className={`fixed w-full z-50 transition-all duration-700 transform ${isScrolled
-          ? 'bg-gradient-to-r from-emerald-700/95 via-lime-700/95 to-yellow-600/95 backdrop-blur-xl shadow-2xl py-3 scale-100'
-          : 'bg-gradient-to-r from-emerald-500 via-lime-500 to-yellow-400 py-5 shadow-xl'
+        ? 'bg-gradient-to-r from-emerald-700/95 via-lime-700/95 to-yellow-600/95 backdrop-blur-xl shadow-2xl py-3 scale-100'
+        : 'bg-gradient-to-r from-emerald-500 via-lime-500 to-yellow-400 py-5 shadow-xl'
         }`}>
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex items-center justify-between">
@@ -274,8 +274,8 @@ export default function Navbar() {
 
           {/* Mobile Menu with 3D Effects */}
           <div className={`xl:hidden overflow-hidden transition-all duration-700 ${isMenuOpen
-              ? 'max-h-[500px] opacity-100 mt-6 scale-100'
-              : 'max-h-0 opacity-0 scale-95'
+            ? 'max-h-[500px] opacity-100 mt-6 scale-100'
+            : 'max-h-0 opacity-0 scale-95'
             }`}>
             <div className="bg-gradient-to-br from-emerald-600/95 via-lime-600/95 to-yellow-500/95 backdrop-blur-xl rounded-2xl p-6 border border-white/30 shadow-2xl">
               {navLinks.map((link, index) => (
@@ -301,10 +301,16 @@ export default function Navbar() {
                     <FiUser />
                     <span className="font-medium">Login / Sign Up</span>
                   </button>
-                  <button className="flex items-center justify-center space-x-3 bg-gradient-to-r from-yellow-500 via-amber-500 to-orange-500 text-white font-bold p-4 rounded-xl hover:opacity-90 transition-all duration-300 shadow-lg transform hover:scale-[1.02]">
-                    <MdFlight className="transform -rotate-45 text-xl" />
-                    <span className="text-lg">Book Now</span>
-                  </button>
+                  <a
+                    href="https://wa.me/918368273091?text=Hello%20Travelya!%20I%20want%20to%20book%20a%20travel%20package.%20Please%20share%20details."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span className="flex items-center space-x-3 drop-shadow-lg">
+                      <MdFlight className="-rotate-45 hover:rotate-12 transition-transform duration-700" />
+                      <span className="tracking-wider">BOOK NOW</span>
+                    </span>
+                  </a>
                 </div>
               </div>
             </div>
