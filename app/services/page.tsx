@@ -1,10 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
-import { 
-  FaPlane, 
-  FaHotel, 
-  FaCar, 
+import {
+  FaPlane,
+  FaHotel,
+  FaCar,
   FaMapMarkerAlt,
   FaShieldAlt,
   FaPassport,
@@ -193,7 +193,7 @@ export default function ServicesPage() {
             </p>
           </div>
         </div>
-        
+
         {/* Floating Elements */}
         <div className="absolute top-10 left-10 text-4xl opacity-20 animate-float">✈️</div>
         <div className="absolute top-20 right-20 text-3xl opacity-20 animate-float animation-delay-300">🏨</div>
@@ -217,11 +217,10 @@ export default function ServicesPage() {
                 <button
                   key={service.id}
                   onClick={() => setActiveService(service.id)}
-                  className={`flex items-center space-x-3 px-6 py-4 rounded-2xl font-bold transition-all duration-300 transform hover:scale-105 ${
-                    activeService === service.id
-                      ? `bg-gradient-to-r ${service.color} text-white shadow-2xl`
-                      : 'bg-white text-gray-700 shadow-lg hover:shadow-xl'
-                  }`}
+                  className={`flex items-center space-x-3 px-6 py-4 rounded-2xl font-bold transition-all duration-300 transform hover:scale-105 ${activeService === service.id
+                    ? `bg-gradient-to-r ${service.color} text-white shadow-2xl`
+                    : 'bg-white text-gray-700 shadow-lg hover:shadow-xl'
+                    }`}
                 >
                   <span>{service.icon}</span>
                   <span>{service.title}</span>
@@ -237,11 +236,11 @@ export default function ServicesPage() {
                   <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${services.find(s => s.id === activeService)?.color} text-white mb-6`}>
                     {services.find(s => s.id === activeService)?.icon}
                   </div>
-                  
+
                   <h3 className="text-3xl font-bold text-gray-800 mb-4">
                     {services.find(s => s.id === activeService)?.title}
                   </h3>
-                  
+
                   <p className="text-xl text-gray-600 mb-8">
                     {services.find(s => s.id === activeService)?.description}
                   </p>
@@ -269,7 +268,7 @@ export default function ServicesPage() {
                 <div className={`bg-gradient-to-br ${services.find(s => s.id === activeService)?.color} p-8 md:p-12 text-white`}>
                   <div className="h-full flex flex-col justify-center">
                     <h4 className="text-2xl font-bold mb-8">Why Choose Our {services.find(s => s.id === activeService)?.title}?</h4>
-                    
+
                     <div className="space-y-6">
                       <div className="flex items-center justify-between">
                         <div>
@@ -278,7 +277,7 @@ export default function ServicesPage() {
                         </div>
                         <FaStar className="text-3xl text-yellow-300" />
                       </div>
-                      
+
                       <div className="flex items-center justify-between">
                         <div>
                           <div className="text-4xl font-bold">24/7</div>
@@ -286,7 +285,7 @@ export default function ServicesPage() {
                         </div>
                         <FaHeadset className="text-3xl" />
                       </div>
-                      
+
                       <div className="flex items-center justify-between">
                         <div>
                           <div className="text-4xl font-bold">Best</div>
@@ -294,7 +293,7 @@ export default function ServicesPage() {
                         </div>
                         <GiPriceTag className="text-3xl" />
                       </div>
-                      
+
                       <div className="flex items-center justify-between">
                         <div>
                           <div className="text-4xl font-bold">5K+</div>
@@ -334,7 +333,7 @@ export default function ServicesPage() {
           {/* How It Works */}
           <div className="bg-gradient-to-r from-emerald-50 to-lime-50 rounded-3xl p-8 border-2 border-emerald-100 mb-16">
             <h3 className="text-2xl font-bold text-gray-800 mb-8 text-center">How It Works</h3>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {processSteps.map((step) => (
                 <div key={step.step} className="relative">
@@ -350,7 +349,7 @@ export default function ServicesPage() {
                     <h4 className="font-bold text-gray-800 mb-2">{step.title}</h4>
                     <p className="text-gray-600 text-sm">{step.description}</p>
                   </div>
-                  
+
                   {step.step < 4 && (
                     <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2">
                       <div className="w-8 h-0.5 bg-emerald-300"></div>
@@ -372,12 +371,26 @@ export default function ServicesPage() {
                 Let our travel experts create the perfect itinerary for you
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-white text-emerald-600 font-bold rounded-xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
-                  Get Free Quote
-                </button>
-                <button className="px-8 py-4 bg-white/20 backdrop-blur-sm text-white font-bold rounded-xl hover:bg-white/30 transition-all duration-300 transform hover:scale-105">
-                  Contact Expert
-                </button>
+                <a
+                  href="https://wa.me/918368273091?text=Hello%20Travelya!%20I%20want%20to%20get%20a%20free%20quote%20for%20a%20travel%20package.%20Please%20share%20details."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="px-8 py-4 bg-white text-emerald-600 font-bold rounded-xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
+                    Get Free Quote
+                  </button>
+                </a>
+
+                <a
+                  href="https://wa.me/918368273091?text=Hello%20Travelya!%20I%20would%20like%20to%20contact%20a%20travel%20expert%20for%20guidance.%20Please%20assist%20me."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="px-8 py-4 bg-white/20 backdrop-blur-sm text-white font-bold rounded-xl hover:bg-white/30 transition-all duration-300 transform hover:scale-105">
+                    Contact Expert
+                  </button>
+                </a>
+
               </div>
             </div>
           </div>
